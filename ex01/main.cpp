@@ -1,22 +1,37 @@
+#include "PhoneBook.cpp"
+#include "Phone.h"
+
 int main(int ac, char **arv)
 {
-	megaphone m;
+	std::string add = "ADD";
+	std::string search = "SEARCH";
+	std::string exit = "EXIT";
+	std::string line;
+	PhoneBook m;
 	int i;
 
 	i = 1;
-	if (ac != 1)
+	if (ac == 1)
 	{
-		while (arv[i])
+		while (1)
 		{
-			m.printFun(arv[i++]);
+			std::getline(std::cin, line);
+			if (line == add)
+				m.addFun(line);
+			else if (line == search)
+				m.searchFun();
+			else if (line  == exit)
+			{
+				m.exitFun();
+				break;
+			}
 			if (arv[i + 1])
 				std::cout << " ";
 		}
 		std::cout << std::endl;
 	}
 	else {
-		m.printFun("* LOUD AND UNBEARABLE FEEDBACK NOISE *");
-		std::cout << std::endl;
+		std::cout << "ERROR: You have more argumants" <<std::endl;
 	}
 	return (0);
 }
