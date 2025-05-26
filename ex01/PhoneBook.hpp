@@ -18,5 +18,6 @@ class PhoneBook
 		std::string phone_number;
 		std::string darkest_secret;
 		int ligth_contact;
+		int separeated_line;
 };
 
