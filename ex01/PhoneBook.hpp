@@ -12,8 +12,6 @@ class PhoneBook
 		PhoneBook();
 		void addFun();
 		void searchFun();
-		void exitFun();
-		void replace_contacts();
 	
 	private:
 		Contact contact[8];

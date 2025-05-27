@@ -79,9 +79,8 @@ PhoneBook::PhoneBook()
 			separeated_line++;
 
 	 }
-	contact[index_contact % 7].edit_Contact(first_name, last_name, nickname, phone_number, darkest_secret);
-	 // if error rturn error
-	 // check how many contact i have if liss than 8 added directly, else repleased with oldest one 
+	contact[index_contact % 8].edit_Contact(first_name, last_name, nickname, phone_number, darkest_secret);
+	index_contact++;
  }
 
  void PhoneBook::searchFun()
@@ -99,9 +98,4 @@ PhoneBook::PhoneBook()
 			break;
 	}
 	contact[line[0] - 1 - '0'].show_contact_all_details();
- }
-
- void PhoneBook::exitFun()
- {
-	
  }

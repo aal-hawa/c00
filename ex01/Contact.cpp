@@ -40,7 +40,7 @@ void Contact::show_contact_details(int index)
 			std::cout << " ";
 		for(size_t index = 0; index < i; index++)
 		{
-			if (index == 9 && i > 9)
+			if (index == 9 && i > 10)
 				word[index] = '.';
 			std::cout << word[index];
 			if(index == 9)

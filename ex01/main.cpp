@@ -22,10 +22,7 @@ int main(int ac, char **arv)
 			else if (line == search)
 				m.searchFun();
 			else if (line  == exit)
-			{
-				m.exitFun();
 				break;
-			}
 			if (arv[i + 1])
 				std::cout << " ";
 		}
