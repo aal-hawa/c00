@@ -1,5 +1,4 @@
-#include "PhoneBook.cpp"
-#include "Phone.h"
+#include "PhoneBook.hpp"
 
 int main(int ac, char **arv)
 {
@@ -15,9 +14,11 @@ int main(int ac, char **arv)
 	{
 		while (1)
 		{
+			std::cout << "Please enter: ADD, SEARCH, or EXIT" << std::endl;
+
 			std::getline(std::cin, line);
 			if (line == add)
-				m.addFun(line);
+				m.addFun();
 			else if (line == search)
 				m.searchFun();
 			else if (line  == exit)
