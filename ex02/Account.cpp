@@ -3,32 +3,32 @@
 #include <ctime>
 #include <iomanip>
 
-Account::Account()
-{
-	Account::_nbAccounts = 0;
-	Account::_totalAmount = 0;
-	Account::_totalNbDeposits = 0;
-	Account::_totalNbWithdrawals = 0;
-}
+
+
+int Account::_nbAccounts = 0;
+	int Account::_totalAmount = 0;
+	int Account::_totalNbDeposits = 0;
+	int Account::_totalNbWithdrawals = 0;
+
 
 Account::Account(int initial_deposit)
 {
 	_nbDeposits = 0;
 	_nbWithdrawals = 0;
 	_amount = initial_deposit;
-	Account::_totalAmount += _amount;
-	_accountIndex = Account::_nbAccounts;
-	Account::_nbAccounts++;
+	_totalAmount += _amount;
+	_accountIndex = _nbAccounts;
+	_nbAccounts++;
 	//[19920104_091532] index:0;amount:42;created
 	_displayTimestamp();
-	std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";created";
+	std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";created" << std::endl;
 }
 
 void Account::displayAccountsInfos(void)
 {
 	//[19920104_091532] accounts:8;total:20049;deposits:0;withdrawals:0
 	_displayTimestamp();
-	std::cout << "accounts:" << getNbAccounts() << ";deposits:" << getNbDeposits() << ";withdrawals:" << getNbWithdrawals();
+	std::cout << "accounts:" << getNbAccounts() << ";total:" << _totalAmount << ";deposits:" << getNbDeposits() << ";withdrawals:" << getNbWithdrawals()<< std::endl;
 
 }
 
@@ -36,7 +36,7 @@ void Account::displayStatus(void) const
 {
 	//[19920104_091532] index:0;amount:42;deposits:0;withdrawals:0
 	_displayTimestamp();
-	std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";deposits:" <<  _nbDeposits << ";withdrawals:" <<_nbWithdrawals;
+	std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";deposits:" <<  _nbDeposits << ";withdrawals:" <<_nbWithdrawals<< std::endl;
 
 }
 
@@ -44,7 +44,7 @@ Account::~Account(void)
 {
 	//[19920104_091532] index:0;amount:47;closed
 	_displayTimestamp();
-	std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";closed";
+	std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";closed"<< std::endl;
 
 }
 
@@ -62,45 +62,70 @@ void	Account::_displayTimestamp( void )
 
 void Account::makeDeposit(int deposit)
 {
-	_nbDeposits  += deposit;
-	Account::_totalNbDeposits += deposit;
+	_nbDeposits++;
+	_totalNbDeposits += deposit;
 	_amount += deposit;
-	Account::_totalAmount += deposit;
+	// _totalAmount += deposit;
+	//[19920104_091532] index:0;p_amount:42;deposit:5;amount:47;nb_deposits:1
+	_displayTimestamp();
+	std::cout << "index:" << _accountIndex << ";p_amount:" << checkAmount() << ";deposit" <<  deposit   << ";amount:" << _amount << ";nb_deposits:" << _nbDeposits  << std::endl;
 }
 
 bool Account::makeWithdrawal(int withdrawal)
 {
 	if (checkAmount() < withdrawal)
+	{
+		
+		//[19920104_091532] index:0;p_amount:47;withdrawal:refused
+		_displayTimestamp();
+	std::cout << "index:" << _accountIndex << ";p_amount:" << _amount << ";withdrawal:refused" << std::endl;
+
 		return (false);
-	_nbWithdrawals += withdrawal;
-	Account::_totalNbWithdrawals += withdrawal;
+	}
+	_nbWithdrawals ++;
+	_totalNbWithdrawals += withdrawal;
 	_amount -= withdrawal;
-	Account::_totalAmount -= withdrawal;
+	_totalAmount -= withdrawal;
 	return (true);
+
+	//[19920104_091532] index:1;p_amount:819;withdrawal:34;amount:785;nb_withdrawals:1
+	_displayTimestamp();
+	std::cout << "index:" << _accountIndex << ";p_amount:" << checkAmount() << ";withdrawal" <<  withdrawal   << ";amount:" << _amount << ";nb_withdrawals:" << _nbWithdrawals  << std::endl;
+
 }
 
 int Account::checkAmount(void) const
 {
-	return (_amount);
+	return (_amount - _nbDeposits);
+	// return (_amount);
 }
 
 int Account::getNbAccounts(void)
 {
-	return(Account::_nbAccounts);
+	return(_nbAccounts);
 }
 
 int Account::getTotalAmount(void)
 {
-	return(Account::_totalAmount);
+	return(_totalAmount);
 
 }
 int Account::getNbDeposits(void)
 {
-	return(Account::_totalNbDeposits);
+	return(_totalNbDeposits);
 
 }
 int Account::getNbWithdrawals(void)
 {
-	return(Account::_totalNbWithdrawals);
+	return(_totalNbWithdrawals);
 
 }
+
+
+// void	Account::initAccountStatic(void)
+// {
+// 	_nbAccounts = 0;
+// 	_totalAmount = 0;
+// 	_totalNbDeposits = 0;
+// 	_totalNbWithdrawals = 0;
+// }

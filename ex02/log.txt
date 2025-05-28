@@ -1,0 +1,79 @@
+[01250428_141145] index:0;amount:42;created
+[01250428_141145] index:1;amount:54;created
+[01250428_141145] index:2;amount:957;created
+[01250428_141145] index:3;amount:432;created
+[01250428_141145] index:4;amount:1234;created
+[01250428_141145] index:5;amount:0;created
+[01250428_141145] index:6;amount:754;created
+[01250428_141145] index:7;amount:16576;created
+
+
+
+[01250428_141145] accounts:8;total:20049;deposits:0;withdrawals:0
+
+
+
+
+[01250428_141145] index:0;amount:42;deposits:0;withdrawals:0
+[01250428_141145] index:1;amount:54;deposits:0;withdrawals:0
+[01250428_141145] index:2;amount:957;deposits:0;withdrawals:0
+[01250428_141145] index:3;amount:432;deposits:0;withdrawals:0
+[01250428_141145] index:4;amount:1234;deposits:0;withdrawals:0
+[01250428_141145] index:5;amount:0;deposits:0;withdrawals:0
+[01250428_141145] index:6;amount:754;deposits:0;withdrawals:0
+[01250428_141145] index:7;amount:16576;deposits:0;withdrawals:0
+
+
+
+[01250428_141145] index:0;p_amount:46;deposit5;amount:47;nb_deposits:1
+[01250428_141145] index:1;p_amount:818;deposit765;amount:819;nb_deposits:1
+[01250428_141145] index:2;p_amount:1520;deposit564;amount:1521;nb_deposits:1
+[01250428_141145] index:3;p_amount:433;deposit2;amount:434;nb_deposits:1
+[01250428_141145] index:4;p_amount:1320;deposit87;amount:1321;nb_deposits:1
+[01250428_141145] index:5;p_amount:22;deposit23;amount:23;nb_deposits:1
+[01250428_141145] index:6;p_amount:762;deposit9;amount:763;nb_deposits:1
+
+
+
+[01250428_141145] index:7;p_amount:16595;deposit20;amount:16596;nb_deposits:1
+
+
+
+[01250428_141145] accounts:8;total:21524;deposits:1475;withdrawals:0
+
+
+[01250428_141145] index:0;amount:47;deposits:1;withdrawals:0
+[01250428_141145] index:1;amount:819;deposits:1;withdrawals:0
+[01250428_141145] index:2;amount:1521;deposits:1;withdrawals:0
+[01250428_141145] index:3;amount:434;deposits:1;withdrawals:0
+[01250428_141145] index:4;amount:1321;deposits:1;withdrawals:0
+[01250428_141145] index:5;amount:23;deposits:1;withdrawals:0
+[01250428_141145] index:6;amount:763;deposits:1;withdrawals:0
+[01250428_141145] index:7;amount:16596;deposits:1;withdrawals:0
+
+
+[01250428_141145] index:0;p_amount:47;withdrawal:refused
+[01250428_141145] index:5;p_amount:23;withdrawal:refused
+
+[01250428_141145] accounts:8;total:12442;deposits:1475;withdrawals:9082
+
+
+[01250428_141145] index:0;amount:47;deposits:1;withdrawals:0
+[01250428_141145] index:1;amount:785;deposits:1;withdrawals:1
+[01250428_141145] index:2;amount:864;deposits:1;withdrawals:1
+[01250428_141145] index:3;amount:430;deposits:1;withdrawals:1
+[01250428_141145] index:4;amount:1245;deposits:1;withdrawals:1
+[01250428_141145] index:5;amount:23;deposits:1;withdrawals:0
+[01250428_141145] index:6;amount:106;deposits:1;withdrawals:1
+[01250428_141145] index:7;amount:8942;deposits:1;withdrawals:1
+
+
+
+[01250428_141145] index:7;amount:8942;closed
+[01250428_141145] index:6;amount:106;closed
+[01250428_141145] index:5;amount:23;closed
+[01250428_141145] index:4;amount:1245;closed
+[01250428_141145] index:3;amount:430;closed
+[01250428_141145] index:2;amount:864;closed
+[01250428_141145] index:1;amount:785;closed
+[01250428_141145] index:0;amount:47;closed
