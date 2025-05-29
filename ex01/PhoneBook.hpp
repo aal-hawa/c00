@@ -1,4 +1,7 @@
 
+#ifndef PHONEBOOK_HPP
+#define PHONEBOOK_HPP
+
 #include <iostream>
 #include <cctype>
 #include <string>
@@ -24,3 +27,4 @@ class PhoneBook
 		int separeated_line;
 };
 
+#endif

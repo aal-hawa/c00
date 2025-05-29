@@ -1,3 +1,7 @@
+
+#ifndef CONTACT_HPP
+#define CONTACT_HPP
+
 #include <iostream>
 #include <cctype>
 #include <string>
@@ -18,3 +22,4 @@ class Contact
 		std::string _darkest_secret;
 };
 
+#endif
