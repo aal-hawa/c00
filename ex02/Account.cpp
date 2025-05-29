@@ -6,9 +6,9 @@
 
 
 int Account::_nbAccounts = 0;
-	int Account::_totalAmount = 0;
-	int Account::_totalNbDeposits = 0;
-	int Account::_totalNbWithdrawals = 0;
+int Account::_totalAmount = 0;
+int Account::_totalNbDeposits = 0;
+int Account::_totalNbWithdrawals = 0;
 
 
 Account::Account(int initial_deposit)
@@ -53,8 +53,8 @@ void	Account::_displayTimestamp( void )
 	//[19920104_091532]
 	std::time_t now = std::time(NULL);
 	std::tm *localTime = std::localtime(&now);
-	std::cout << "[" << std::setfill('0') << std::setw(4) << localTime->tm_year <<
-	std::setw(2) << localTime->tm_mon << std::setw(2) << localTime->tm_mday <<
+	std::cout << "[" << std::setfill('0') << std::setw(4) << (localTime->tm_year + 1900) <<
+	std::setw(2) << (localTime->tm_mon + 1) << std::setw(2) << localTime->tm_mday <<
 	"_" << std::setw(2) << localTime->tm_hour << std::setw(2) << localTime->tm_min <<
 	std::setw(2) << localTime->tm_sec << "] ";
 
@@ -97,8 +97,8 @@ bool Account::makeWithdrawal(int withdrawal)
 
 int Account::checkAmount(void) const
 {
-	return (_amount - _nbDeposits);
-	// return (_amount);
+	// return (_amount - _nbDeposits);
+	return (_amount);
 }
 
 int Account::getNbAccounts(void)
@@ -121,12 +121,3 @@ int Account::getNbWithdrawals(void)
 	return(_totalNbWithdrawals);
 
 }
-
-
-// void	Account::initAccountStatic(void)
-// {
-// 	_nbAccounts = 0;
-// 	_totalAmount = 0;
-// 	_totalNbDeposits = 0;
-// 	_totalNbWithdrawals = 0;
-// }

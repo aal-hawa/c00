@@ -5,7 +5,7 @@
 class megaphone
 {
     public:
-		static void printFun(std::string str)
+		void printFun(std::string str)
 		{
 			for(size_t i = 0; i < str.length(); i++)
 			{
@@ -26,7 +26,7 @@ int main(int ac, char **arv)
 		while (arv[i])
 		{
 			m.printFun(arv[i++]);
-			if (arv[i + 1])
+			if (arv[i])
 				std::cout << " ";
 		}
 		std::cout << std::endl;
