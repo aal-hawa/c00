@@ -1,8 +1,6 @@
 #include <iostream>
-#include <cctype>
-#include <string>
 
-class megaphone
+class Megaphone
 {
     public:
 		void printFun(std::string str)
@@ -17,22 +15,18 @@ class megaphone
 
 int main(int ac, char **arv)
 {
-	megaphone m;
+	Megaphone megaphone;
 	int i;
 
 	i = 1;
 	if (ac != 1)
 	{
 		while (arv[i])
-		{
-			m.printFun(arv[i++]);
-			if (arv[i])
-				std::cout << " ";
-		}
+			megaphone.printFun(arv[i++]);
 		std::cout << std::endl;
 	}
 	else {
-		m.printFun("* LOUD AND UNBEARABLE FEEDBACK NOISE *");
+		megaphone.printFun("* LOUD AND UNBEARABLE FEEDBACK NOISE *");
 		std::cout << std::endl;
 	}
 	return (0);

@@ -9,8 +9,6 @@
 
 class PhoneBook
 {
-	//first name, last name, nickname, phone number, and darkest secret
-	
     public:
 		PhoneBook();
 		void addFun();
