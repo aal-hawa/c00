@@ -6,7 +6,7 @@ int main(int ac, char **arv)
 	std::string search = "SEARCH";
 	std::string exit = "EXIT";
 	std::string line = "";
-	PhoneBook m;
+	PhoneBook phoneBook;
 	int i;
 	(void)arv;
 	i = 1;
@@ -18,12 +18,10 @@ int main(int ac, char **arv)
 
 			if (!std::getline(std::cin, line))
 				break;
-			// if (line == "")
-			// 	break;
 			if (line == add)
-				m.addFun();
+				phoneBook.addFun();
 			else if (line == search)
-				m.searchFun();
+				phoneBook.searchFun();
 			else if (line  == exit)
 				break;
 		}
